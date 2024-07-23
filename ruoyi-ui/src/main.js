@@ -37,6 +37,15 @@ import DictTag from '@/components/DictTag'
 import VueMeta from 'vue-meta'
 // 字典数据组件
 import DictData from '@/components/DictData'
+import axios from "axios";
+
+//把方法放到vue的原型上，这样就可以全局使用了
+Vue.prototype.$http = axios.create({
+  //设置20秒超时时间
+  timeout: 20000,
+  baseURL: "http://172.0.0.1:8080", //这里写后端地址
+});
+
 
 // 全局方法挂载
 Vue.prototype.getDicts = getDicts
