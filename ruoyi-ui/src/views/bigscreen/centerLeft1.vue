@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import CenterLeft1Chart from '@/components/bigscreen/echart/centerLeft/centerLeft1Chart'
+import CenterLeft1Chart from '@/components/bigscreen/echart/centerLeft/centerLeft1Chart/index.vue'
 export default {
   data() {
     return {
@@ -168,5 +168,5 @@ $box-height: 410px;
 }
 </style>
 <style lang="scss" scoped>
-@import '@/assets/bigscreen/scss/style.scss';
+@import '@/assets/bigscreen/scss/style';
 </style>

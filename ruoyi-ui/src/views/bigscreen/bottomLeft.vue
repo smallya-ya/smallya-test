@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import BottomLeftChart from '@/components/bigscreen/echart/bottom/bottomLeftChart'
+import BottomLeftChart from '@/components/bigscreen/echart/bottom/bottomLeftChart/index.vue'
 export default {
   components: {
     BottomLeftChart
@@ -51,5 +51,5 @@ $box-width: 100%;
 }
 </style>
 <style lang="scss" scoped>
-@import '@/assets/bigscreen/scss/style.scss';
+@import '@/assets/bigscreen/scss/style';
 </style>

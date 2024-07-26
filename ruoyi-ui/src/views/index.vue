@@ -8,7 +8,7 @@
           <div class="d-flex jc-center">
             <dv-decoration-8 class="dv-dec-8" :color="decorationColor" />
             <div class="title">
-              <span class="title-text">大数据可视化平台</span>
+<!--              <span class="title-text">大数据可视化平台</span>-->
               <dv-decoration-6
                 class="dv-dec-6"
                 :reverse="true"
@@ -36,9 +36,9 @@
             </div>
           </div>
           <div class="d-flex aside-width">
-            <div class="react-right bg-color-blue mr-3">
-              <span class="text fw-b">vue-big-screen</span>
-            </div>
+<!--            <div class="react-right bg-color-blue mr-3">-->
+<!--              <span class="text fw-b">vue-big-screen</span>-->
+<!--            </div>-->
             <div class="react-right mr-4 react-l-s">
               <span class="react-after"></span>
               <span class="text"
@@ -94,13 +94,13 @@
 <script>
 import drawMixin from "@/utils/bigscreen/drawMixin";
 import { formatTime } from '@/utils/bigscreen/index.js'
-import centerLeft1 from './centerLeft1'
-import centerLeft2 from './centerLeft2'
-import centerRight1 from './centerRight1'
-import centerRight2 from './centerRight2'
-import center from './center'
-import bottomLeft from './bottomLeft'
-import bottomRight from './bottomRight'
+import centerLeft1 from './bigscreen/centerLeft1.vue'
+import centerLeft2 from './bigscreen/centerLeft2.vue'
+import centerRight1 from './bigscreen/centerRight1.vue'
+import centerRight2 from './bigscreen/centerRight2.vue'
+import center from './bigscreen/center.vue'
+import bottomLeft from './bigscreen/bottomLeft.vue'
+import bottomRight from './bigscreen/bottomRight.vue'
 
 
 // 这段代码利用了 Vue 的响应式特性和生命周期钩子，实现了定时更新时间和动态加载状态的功能。

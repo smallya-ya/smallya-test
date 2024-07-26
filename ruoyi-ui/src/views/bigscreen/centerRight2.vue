@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import centerRight2Chart1 from '@/components/bigscreen/echart/centerRight/centerRightChart'
+import centerRight2Chart1 from '@/components/bigscreen/echart/centerRight/centerRightChart/index.vue'
 
 export default {
   data() {
@@ -79,5 +79,5 @@ export default {
 }
 </style>
 <style lang="scss" scoped>
-@import '@/assets/bigscreen/scss/style.scss';
+@import '@/assets/bigscreen/scss/style';
 </style>

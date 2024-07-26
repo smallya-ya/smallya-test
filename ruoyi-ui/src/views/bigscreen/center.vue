@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import CenterChart from '@/components/bigscreen/echart/center/centerChartRate'
+import CenterChart from '@/components/bigscreen/echart/center/centerChartRate/index.vue'
 
 export default {
   data() {
@@ -282,5 +282,5 @@ export default {
 }
 </style>
 <style lang="scss" scoped>
-@import '@/assets/bigscreen/scss/style.scss';
+@import '@/assets/bigscreen/scss/style';
 </style>

@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import CenterLeft2Chart from "@/components/bigscreen/echart/centerLeft/centerLeft2Chart";
+import CenterLeft2Chart from "@/components/bigscreen/echart/centerLeft/centerLeft2Chart/index.vue";
 export default {
   components: {
     CenterLeft2Chart
@@ -58,5 +58,5 @@ export default {
 }
 </style>
 <style lang="scss" scoped>
-@import '@/assets/bigscreen/scss/style.scss';
+@import '@/assets/bigscreen/scss/style';
 </style>
