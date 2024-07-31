@@ -16,16 +16,18 @@
       </div>
     </div>
     <div class="down">
+      <!-- 射击分数排行榜区域 -->
       <div class="ranking bg-color-black">
         <span>
           <icon name="chart-pie" class="text-icon"></icon>
         </span>
-        <span class="fs-xl text mx-2 mb-1 pl-3">年度负责人组件达标榜</span>
+        <span class="fs-xl text mx-2 mb-1 pl-3">射击分数前十排行榜</span>
         <dv-scroll-ranking-board class="dv-scr-rank-board mt-1" :config="ranking" />
       </div>
+      <!-- 通过率和达标率展示区域 -->
       <div class="percent">
         <div class="item bg-color-black">
-          <span>今日任务通过率</span>
+          <span>今日射击通过率</span>
           <CenterChart
             :id="rate[0].id"
             :tips="rate[0].tips"
@@ -40,6 +42,7 @@
             :colorObj="rate[1].colorData"
           />
         </div>
+        <!-- 水位图展示区域 -->
         <div class="water">
           <dv-water-level-pond class="dv-wa-le-po" :config="water" />
         </div>
@@ -50,13 +53,18 @@
 
 <script>
 import CenterChart from '@/components/bigscreen/echart/center/centerChartRate/index.vue'
-
+import axios from 'axios';
+/**
+ * 大屏幕主组件
+ * 展示射击分数排行榜、通过率和达标率
+ */
 export default {
   data() {
     return {
+      // 演习相关统计数据
       titleItem: [
         {
-          title: '今年累计任务建次数',
+          title: '今年演习次数',
           number: {
             number: [120],
             toFixed: 1,
@@ -68,7 +76,7 @@ export default {
           }
         },
         {
-          title: '本月累计任务次数',
+          title: '本月演习次数',
           number: {
             number: [18],
             toFixed: 1,
@@ -80,7 +88,7 @@ export default {
           }
         },
         {
-          title: '今日累计任务次数',
+          title: '今日演习次数',
           number: {
             number: [2],
             toFixed: 1,
@@ -128,63 +136,72 @@ export default {
           }
         }
       ],
+      // 射击分数排行榜数据
+      // ranking: {
+      //   data: [
+      //     {
+      //       name: '张三',
+      //       value: 50
+      //     },
+      //     {
+      //       name: '李四',
+      //       value: 43
+      //     },
+      //     {
+      //       name: '王五',
+      //       value: 33
+      //     },
+      //     {
+      //       name: '老六',
+      //       value: 46
+      //     },
+      //     {
+      //       name: '老王',
+      //       value: 10
+      //     },
+      //     {
+      //       name: '小黑子',
+      //       value: 49
+      //     },
+      //     {
+      //       name: '蒸虾头',
+      //       value: 35
+      //     },
+      //     {
+      //       name: '香精煎鱼',
+      //       value: 43
+      //     },
+      //     {
+      //       name: '邮电部诗人',
+      //       value: 8
+      //     },
+      //     {
+      //       name: '万泉部诗人',
+      //       value: 2
+      //     },
+      //
+      //   ],
+      //   carousel: 'single',
+      //   unit: '分'
+      // },
       ranking: {
-        data: [
-          {
-            name: '周口',
-            value: 55
-          },
-          {
-            name: '南阳',
-            value: 120
-          },
-          {
-            name: '西峡',
-            value: 78
-          },
-          {
-            name: '驻马店',
-            value: 66
-          },
-          {
-            name: '新乡',
-            value: 80
-          },
-          {
-            name: '新乡2',
-            value: 80
-          },
-          {
-            name: '新乡3',
-            value: 80
-          },
-          {
-            name: '新乡4',
-            value: 80
-          },
-          {
-            name: '新乡5',
-            value: 80
-          },
-          {
-            name: '新乡6',
-            value: 80
-          }
-        ],
+        data: [],
         carousel: 'single',
-        unit: '人'
+        unit: '分'
       },
+      // 水位图数据
       water: {
-        data: [24, 45],
+        data: [20, 45],
         shape: 'roundRect',
         formatter: '{value}%',
         waveNum: 3
       },
+      // 通过率和达标率数据
       // 通过率和达标率的组件复用数据
       rate: [
         {
           id: 'centerRate1',
-          tips: 60,
+          tips: 50,
           colorData: {
             textStyle: '#3fc0fb',
             series: {
@@ -198,7 +215,7 @@ export default {
         },
         {
           id: 'centerRate2',
-          tips: 40,
+          tips: 30,
           colorData: {
             textStyle: '#67e0e3',
             series: {
@@ -213,6 +230,16 @@ export default {
       ]
     }
   },
+  methods: {
+    async fetchData() {
+      try {
+        const responseRanking = await axios.get('/api/bigscreen/ranking');
+        this.ranking.data = responseRanking.data;
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
+    },
   components: {
     CenterChart
   }

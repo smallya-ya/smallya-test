@@ -5,7 +5,7 @@
         <span>
           <icon name="align-left" class="text-icon"></icon>
         </span>
-        <span class="fs-xl text mx-2">产品销售渠道分析</span>
+        <span class="fs-xl text mx-2">演习个人表现分析</span>
       </div>
       <div class="d-flex ai-center flex-column body-box">
         <dv-capsule-chart class="dv-cap-chart" :config="config" />
@@ -24,23 +24,23 @@ export default {
       config: {
         data: [
           {
-            name: '南阳',
+            name: '张三',
             value: 167
           },
           {
-            name: '周口',
+            name: '王五',
             value: 67
           },
           {
-            name: '漯河',
+            name: '李四',
             value: 123
           },
           {
-            name: '郑州',
+            name: '老六',
             value: 55
           },
           {
-            name: '西峡',
+            name: '小黑子',
             value: 98
           }
         ]

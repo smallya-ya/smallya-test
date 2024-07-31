@@ -182,4 +182,23 @@ a {
   .#{$typekey} {
     #{$type}: 0;
   }
+
+// 响应式设计
+//@media screen and (max-width: 768px) {
+//  body {
+//    font-size: 14px; // 或者使用百分比、em单位等
+//  }
+//
+//  .title-item {
+//    font-size: 1rem; // 可以根据需要调整
+//  }
+//
+//  // 根据需要调整其他样式
+//}
+//
+//@media screen and (max-width: 480px) {
+//  body {
+//    font-size: 12px; // 或者使用百分比、em单位等
+//  }
+//}
 }

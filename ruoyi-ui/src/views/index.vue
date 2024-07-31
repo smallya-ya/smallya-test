@@ -101,7 +101,7 @@ import centerRight2 from './bigscreen/centerRight2.vue'
 import center from './bigscreen/center.vue'
 import bottomLeft from './bigscreen/bottomLeft.vue'
 import bottomRight from './bigscreen/bottomRight.vue'
-
+import '@/common/map/flexible.js';
 
 // 这段代码利用了 Vue 的响应式特性和生命周期钩子，实现了定时更新时间和动态加载状态的功能。
 export default {
@@ -148,6 +148,7 @@ export default {
     }
   }
 }
+
 </script>
 
 <style lang="scss" scoped>

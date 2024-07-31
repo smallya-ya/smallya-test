@@ -11,12 +11,12 @@ export default {
     return {
       cdata: {
         indicatorData: [
-          { name: "data1", max: 300 },
-          { name: "data2", max: 250 },
-          { name: "data3", max: 300 },
-          { name: "data4", max: 5},
-          { name: "data5", max: 200 },
-          { name: "data6", max: 100 }
+          { name: "张三", max: 300 },
+          { name: "王五", max: 250 },
+          { name: "李四", max: 300 },
+          { name: "赵七", max: 5},
+          { name: "萧六", max: 200 },
+          { name: "老八", max: 100 }
         ],
         dataBJ: [
           [94, 69, 114, 2.08, 73, 39, 22],

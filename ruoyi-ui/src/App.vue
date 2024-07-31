@@ -7,6 +7,7 @@
 
 <script>
 import ThemePicker from "@/components/ThemePicker";
+import '@/common/map/flexible.js';
 
 export default {
   name: "App",

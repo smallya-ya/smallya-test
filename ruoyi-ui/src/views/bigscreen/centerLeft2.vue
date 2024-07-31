@@ -6,7 +6,7 @@
           <icon name="chart-pie" class="text-icon"></icon>
         </span>
         <div class="d-flex">
-          <span class="fs-xl text mx-2">地图数据</span>
+          <span class="fs-xl text mx-2">演习地图数据</span>
           <dv-decoration-1 class="dv-dec-1" />
         </div>
       </div>

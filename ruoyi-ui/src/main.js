@@ -82,13 +82,17 @@ DictData.install()
  */
 //数据大屏引入
 import dataV from '@jiaminghi/data-view';
+import VueParticles from 'vue-particles'
 // 按需引入vue-awesome图标
+Vue.component('icon',Icon)
 import Icon from 'vue-awesome/components/Icon';
 import 'vue-awesome/icons/chart-bar.js';
 import 'vue-awesome/icons/chart-area.js';
 import 'vue-awesome/icons/chart-pie.js';
 import 'vue-awesome/icons/chart-line.js';
 import 'vue-awesome/icons/align-left.js';
+import './common/map/flexible.js'; // 或者根据你的实际路径进行修改
+
 //引入echart
 //4.x 引用方式
 // import echarts from 'echarts'
@@ -97,9 +101,12 @@ import 'vue-awesome/icons/align-left.js';
 import * as echarts from 'echarts'
 Vue.prototype.$echarts = echarts
 Vue.config.productionTip = false;
-// 全局注册
+// 大屏
 Vue.use(dataV);
-
+import { borderBox1 } from '@jiaminghi/data-view'
+Vue.use(borderBox1)
+//粒子特效
+Vue.use(VueParticles)
 
 
 Vue.use(Element, {

@@ -87,6 +87,28 @@ export const constantRoutes = [
         meta: { title: '个人中心', icon: 'user' }
       }
     ]
+  },
+// 测试
+  {
+    path: '/user',
+    component: Layout,
+    children: [
+      {
+        path: '/test',
+        component: () => import('@/views/test/test'),
+      }
+    ]
+  },
+  // 演习管理
+  {
+    path: '/user',
+    component: Layout,
+    children: [
+      {
+        path: '/drill',
+        component: () => import('@/views/drill/battle/index'),
+      }
+    ]
   }
 ]
 

@@ -6,11 +6,23 @@
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <script src="@/common/map/flexible.js"></script>
+
     <title>启森管理系统</title>
     <!--[if lt IE 11]><script>window.location.href='/html/ie.html';</script><![endif]-->
 	  <style>
     html,
-    body,
+    body {
+      margin: 0; /* 清除默认的 body margin */
+    }
+    /* 定义 flex 布局中的项目样式 */
+    //.flex-item {
+    //  flex: 1; /* 项目将按比例分配剩余空间 */
+    //  background-color: #f1f1f1; /* 示例背景色 */
+    //  margin: 1%; /* 项目之间的间距 */
+    //  padding: 2%; /* 内边距 */
+    //  box-sizing: border-box; /* 确保 padding 和 border 不增加元素的总宽度 */
+    //}
     #app {
       height: 100%;
       margin: 0px;
@@ -194,15 +206,21 @@
       opacity: 0.5;
     }
   </style>
+
   </head>
   <body>
-    <div id="app">
-	    <div id="loader-wrapper">
-		    <div id="loader"></div>
-		    <div class="loader-section section-left"></div>
-		    <div class="loader-section section-right"></div>
-		    <div class="load_title">正在加载系统资源，请耐心等待</div>
-        </div>
-	</div>
+  <div id="app">
+  <dv-full-screen-container class="full-screen">
+
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+      <div class="load_title">正在加载系统资源，请耐心等待</div>
+    </div>
+
+  </dv-full-screen-container>
+  </div>
   </body>
+
 </html>
